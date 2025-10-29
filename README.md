@@ -58,17 +58,16 @@ We aren't training a model from scratch. We are fine-tuning a powerful, pre-exis
 
 ## 📈 Status & Roadmap
 
-This project is trained in **multiple stages** to process our large dataset:
+This project is trained in **multiple stages** due to dataset size and compute limitations:
 
-* **Stage 1 (Complete):** Trained on the first segment of our dataset.
-    * **Result:** `adapter_v1` (Publicly available - `.safetensors` file)
-        * **Primary Download:** [Catbox Link](https://files.catbox.moe/j2rd4d.safetensors)
-        * **Mirror Download:** [Google Drive Link](https://drive.google.com/drive/folders/1YYZYYOlHUs_YwzU3EbyGnSM15DUroXko)
-* **Stage 2 (In Progress):** Loading `adapter_v1` and continuing training on the next data segment.
+* **Stage 1 (In Progress):** Trained on the **first 500,000 samples** of the dataset.
+    * **Result:** `adapter_v1` (Represents initial learning on a substantial data portion)
+
+* **Stage 2 (Upcoming):** Loading `adapter_v1` and continuing training on the **next segment** of the dataset (e.g., samples 500,001 to 1,000,000).
     * **Result:** `adapter_v2`
-* **Stage 3 (Upcoming):** Loading `adapter_v2` and training on the final segment.
-    * **Result:** `adapter_v3` (The final, complete adapter)
 
+* **Stage 3 (Upcoming):** Loading `adapter_v2` and training on the **subsequent segment** until the full dataset is processed.
+    * **Result:** `adapter_vX` (The final adapter after processing all data)
 -----
 
 ## 🚀 How to Use
